@@ -1,2 +1,17 @@
-example_setting:
+marquee_text:
+  default: "Welcome to our community! New events every week ~ Check out the latest announcements ~ Have fun and be kind to each other ~"
+
+show_clouds:
   default: true
+
+ticker_speed:
+  type: integer
+  default: 30
+  min: 10
+  max: 60
+
+ranking_count:
+  type: integer
+  default: 5
+  min: 3
+  max: 10

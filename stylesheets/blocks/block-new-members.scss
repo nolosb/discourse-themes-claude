@@ -1,0 +1,77 @@
+.block-new-members {
+  background: linear-gradient(135deg, var(--jp-peach), var(--jp-yellow));
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+
+  &__title {
+    font-size: var(--font-up-1);
+    margin-bottom: var(--space-3);
+    color: var(--jp-text);
+
+    &::before {
+      content: "✨ ";
+    }
+  }
+
+  &__loading {
+    padding: var(--space-3);
+    text-align: center;
+    color: var(--jp-text-light);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-2);
+
+    @include viewport.until(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-half);
+    padding: var(--space-2);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--jp-radius);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: var(--jp-shadow-hover);
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__name {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--jp-text);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  &__welcome {
+    text-align: center;
+    font-size: var(--font-down-2);
+    color: var(--jp-text-light);
+    font-weight: 600;
+    margin: var(--space-2) 0 0;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,28 @@
+:root {
+  --jp-pink: #ffe4f0;
+  --jp-pink-deep: #ff7bac;
+  --jp-lavender: #e8deff;
+  --jp-lavender-deep: #7c6cdb;
+  --jp-mint: #d4f5e9;
+  --jp-mint-deep: #6bcba0;
+  --jp-cream: #fff8fc;
+  --jp-peach: #ffe5d4;
+  --jp-peach-deep: #ffaa7b;
+  --jp-sky: #dceeff;
+  --jp-sky-deep: #7bb8f0;
+  --jp-yellow: #ffeaa7;
+  --jp-yellow-deep: #f0c040;
+  --jp-text: #4a3b5c;
+  --jp-text-light: #8a7a9c;
+  --jp-border: 2px solid rgba(74, 59, 92, 0.15);
+  --jp-border-accent: 2px solid var(--jp-pink-deep);
+  --jp-radius: 12px;
+  --jp-radius-lg: 20px;
+  --jp-radius-pill: 100px;
+  --jp-shadow: 0 2px 8px rgba(124, 108, 219, 0.08);
+  --jp-shadow-hover: 0 4px 16px rgba(124, 108, 219, 0.15);
+
+  --d-border-radius: 12px;
+  --d-border-radius-large: 20px;
+  --d-button-border-radius: 100px;
+}

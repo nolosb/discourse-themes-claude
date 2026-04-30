@@ -1,0 +1,54 @@
+.block-ticker {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, var(--jp-lavender), var(--jp-pink), var(--jp-lavender));
+  background-size: 200% 100%;
+  animation: shimmer 8s ease infinite;
+  border: var(--jp-border-accent);
+  border-radius: var(--jp-radius-pill);
+  padding: var(--space-1) var(--space-2);
+  overflow: hidden;
+  gap: var(--space-2);
+
+  &__badge {
+    flex-shrink: 0;
+    background: var(--jp-pink-deep);
+    color: white;
+    font-size: var(--font-down-2);
+    font-weight: 800;
+    padding: 0.15em 0.6em;
+    border-radius: var(--jp-radius-pill);
+    animation: pulse-glow 2s ease infinite;
+  }
+
+  &__track {
+    overflow: hidden;
+    flex: 1;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+
+  &__scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    white-space: nowrap;
+    animation: ticker-scroll 30s linear infinite;
+    font-size: var(--font-down-1);
+  }
+
+  &__item {
+    color: var(--jp-text);
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: var(--jp-lavender-deep);
+      text-decoration: underline;
+    }
+  }
+
+  &__sep {
+    color: var(--jp-pink-deep);
+    font-size: var(--font-down-2);
+  }
+}

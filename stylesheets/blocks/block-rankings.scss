@@ -1,0 +1,118 @@
+.block-rankings {
+  background: var(--jp-cream);
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+
+  &__title {
+    font-size: var(--font-up-1);
+    margin-bottom: var(--space-3);
+    text-align: center;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    width: 100%;
+    justify-content: center;
+
+    &::before {
+      content: "👑";
+      animation: wiggle 2s ease-in-out infinite;
+    }
+  }
+
+  &__loading {
+    text-align: center;
+    padding: var(--space-4);
+    color: var(--jp-text-light);
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+
+    @include viewport.until(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__column {
+    background: white;
+    border-radius: var(--jp-radius);
+    padding: var(--space-3);
+    border: var(--jp-border);
+  }
+
+  &__subtitle {
+    font-size: var(--font-down-1);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    padding-bottom: var(--space-1);
+    border-bottom: 2px dashed;
+
+    &.--pink {
+      color: var(--jp-pink-deep);
+      border-color: var(--jp-pink);
+    }
+
+    &.--purple {
+      color: var(--jp-lavender-deep);
+      border-color: var(--jp-lavender);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  &__entry {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: 0.3em 0;
+    font-size: var(--font-down-1);
+    border-bottom: 1px dotted rgba(74, 59, 92, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__rank {
+    flex-shrink: 0;
+    width: 1.8em;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__user {
+    flex: 1;
+    color: var(--jp-text);
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      color: var(--jp-lavender-deep);
+    }
+  }
+
+  &__score {
+    flex-shrink: 0;
+    font-weight: 800;
+    font-size: var(--font-down-2);
+    background: var(--jp-yellow);
+    padding: 0.1em 0.4em;
+    border-radius: var(--jp-radius-pill);
+    color: var(--jp-text);
+  }
+}

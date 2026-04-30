@@ -1,5 +1,45 @@
 en:
   theme_metadata:
-    description: Japanese-style dense community portal with pastel colors and animations
+    description: "Japanese-style dense community portal with pastel colors, floating clouds, and animated sections"
     settings:
-      example_setting: A description of a setting.
+      marquee_text: "Scrolling ticker text at the top of the homepage"
+      show_clouds: "Show floating cloud animations"
+      ticker_speed: "Marquee animation duration in seconds (lower = faster)"
+      ranking_count: "Number of users to show in rankings"
+  homepage:
+    ticker:
+      new: "NEW"
+    welcome:
+      title: "Community Plaza"
+      date_label: "Today"
+      members_online: "Online Now"
+    rankings:
+      title: "Weekly Rankings"
+      likes_given: "Most Generous"
+      posts: "Most Active"
+      streak: "Longest Streak"
+    hot_topics:
+      title: "Hot Topics"
+      fire: "HOT"
+    new_members:
+      title: "New Faces"
+      welcome_msg: "Welcome!"
+    todays_birthday:
+      title: "Celebrations"
+      no_events: "No celebrations today~"
+    random_topic:
+      title: "Lucky Draw"
+      subtitle: "Random pick for you!"
+    mood:
+      title: "Community Mood"
+      posts_today: "posts today"
+      topics_today: "new threads"
+      likes_today: "hearts given"
+    latest_photos:
+      title: "Photo Board"
+    mini_poll:
+      title: "Quick Poll"
+      question: "How's your day going?"
+      great: "Great!"
+      okay: "Okay~"
+      sleepy: "Sleepy..."

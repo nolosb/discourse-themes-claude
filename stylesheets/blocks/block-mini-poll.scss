@@ -1,0 +1,78 @@
+.block-mini-poll {
+  background: var(--jp-mint);
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+  text-align: center;
+
+  &__title {
+    font-size: var(--font-up-1);
+    color: var(--jp-text);
+    margin-bottom: var(--space-1);
+
+    &::before {
+      content: "📊 ";
+    }
+  }
+
+  &__question {
+    font-size: var(--font-down-1);
+    font-weight: 600;
+    color: var(--jp-text-light);
+    margin: 0 0 var(--space-3);
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    border: 2px solid rgba(74, 59, 92, 0.15);
+    border-radius: var(--jp-radius-pill);
+    background: white;
+    font-weight: 700;
+    font-size: var(--font-down-1);
+    color: var(--jp-text);
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &.--opt1:hover {
+      background: var(--jp-yellow);
+      border-color: var(--jp-yellow-deep);
+    }
+
+    &.--opt2:hover {
+      background: var(--jp-pink);
+      border-color: var(--jp-pink-deep);
+    }
+
+    &.--opt3:hover {
+      background: var(--jp-lavender);
+      border-color: var(--jp-lavender-deep);
+    }
+  }
+
+  &__result {
+    background: white;
+    border-radius: var(--jp-radius-pill);
+    padding: var(--space-3);
+    font-weight: 700;
+    color: var(--jp-text);
+    animation: bounce-soft 1s ease-in-out;
+
+    &::before {
+      content: "✓ ";
+      color: var(--jp-mint-deep);
+    }
+  }
+}

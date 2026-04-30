@@ -1,0 +1,58 @@
+.block-random-topic {
+  background: linear-gradient(135deg, var(--jp-lavender), var(--jp-sky));
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+  text-align: center;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    margin-bottom: var(--space-1);
+  }
+
+  &__icon {
+    font-size: var(--font-up-2);
+    animation: wiggle 1.5s ease-in-out infinite;
+  }
+
+  &__title {
+    font-size: var(--font-up-1);
+    color: var(--jp-text);
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: var(--font-down-2);
+    color: var(--jp-text-light);
+    margin: 0 0 var(--space-3);
+    font-weight: 600;
+  }
+
+  &__body {
+    display: block;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: var(--jp-radius);
+    padding: var(--space-3);
+    font-weight: 700;
+    font-size: var(--font-up-0);
+    color: var(--jp-text);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(4px);
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: var(--jp-shadow-hover);
+      color: var(--jp-lavender-deep);
+    }
+
+    &.--loading {
+      color: var(--jp-text-light);
+      animation: bounce-soft 1s ease-in-out infinite;
+    }
+  }
+}

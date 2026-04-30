@@ -1,13 +1,29 @@
 {
   "name": "Discourse Claude 1",
   "authors": "Discourse",
-  "about_url": "TODO: Put your theme's public repo or Meta topic URL here",
-  "license_url": "TODO: Put your theme's LICENSE URL here",
-  "learn_more": "TODO",
+  "about_url": null,
+  "license_url": null,
   "theme_version": "0.0.1",
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "assets": {},
-  "modifiers": {},
-  "color_schemes": {}
+  "modifiers": {
+    "serialize_topic_excerpts": true,
+    "custom_homepage": true,
+    "svg_icons": ["crown", "fire", "star", "heart", "bolt", "trophy", "gift", "face-smile", "clock", "ranking-star", "champagne-glasses", "cake-candles", "comments", "meteor"]
+  },
+  "color_schemes": {
+    "Sakura Portal": {
+      "primary": "4A3B5C",
+      "secondary": "FFF8FC",
+      "tertiary": "7C6CDB",
+      "quaternary": "E86CA0",
+      "header_background": "FFE4F0",
+      "header_primary": "4A3B5C",
+      "highlight": "FFEAA7",
+      "danger": "E86CA0",
+      "success": "6BCBA0",
+      "love": "FF7BAC"
+    }
+  }
 }

@@ -1,0 +1,77 @@
+.block-mood {
+  background: white;
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+
+  &__title {
+    font-size: var(--font-up-1);
+    margin-bottom: var(--space-3);
+    text-align: center;
+    color: var(--jp-text);
+
+    &::before {
+      content: "💫 ";
+    }
+  }
+
+  &__loading {
+    text-align: center;
+    padding: var(--space-3);
+    font-size: var(--font-up-2);
+    animation: bounce-soft 1.5s ease-in-out infinite;
+  }
+
+  &__gauges {
+    display: flex;
+    gap: var(--space-2);
+    justify-content: center;
+
+    @include viewport.until(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__gauge {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-3) var(--space-2);
+    border-radius: var(--jp-radius);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.--pink {
+      background: var(--jp-pink);
+    }
+
+    &.--lavender {
+      background: var(--jp-lavender);
+    }
+
+    &.--mint {
+      background: var(--jp-mint);
+    }
+  }
+
+  &__value {
+    font-size: var(--font-up-3);
+    font-weight: 900;
+    color: var(--jp-text);
+    line-height: 1;
+    animation: bounce-soft 3s ease-in-out infinite;
+  }
+
+  &__label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--jp-text-light);
+    margin-top: var(--space-1);
+    text-align: center;
+  }
+}

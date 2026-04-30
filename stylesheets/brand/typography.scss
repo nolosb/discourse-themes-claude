@@ -1,0 +1,12 @@
+:root {
+  --font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+  --heading-font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  color: var(--jp-text);
+}

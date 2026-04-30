@@ -1,0 +1,183 @@
+.block-welcome-header {
+  position: relative;
+  background: linear-gradient(180deg, var(--jp-sky) 0%, var(--jp-cream) 100%);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  overflow: hidden;
+  border: var(--jp-border);
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__clouds {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  &__cloud {
+    position: absolute;
+    background: white;
+    border-radius: 100px;
+    opacity: 0.7;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+
+    &.--c1 {
+      width: 120px;
+      height: 40px;
+      top: 20%;
+      left: 5%;
+      animation: float-cloud 12s ease-in-out infinite;
+
+      &::before {
+        width: 50px;
+        height: 50px;
+        top: -20px;
+        left: 20px;
+      }
+
+      &::after {
+        width: 35px;
+        height: 35px;
+        top: -15px;
+        left: 55px;
+      }
+    }
+
+    &.--c2 {
+      width: 90px;
+      height: 30px;
+      top: 10%;
+      right: 15%;
+      animation: float-cloud-reverse 15s ease-in-out infinite;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+        top: -18px;
+        left: 15px;
+      }
+
+      &::after {
+        width: 28px;
+        height: 28px;
+        top: -12px;
+        left: 42px;
+      }
+    }
+
+    &.--c3 {
+      width: 70px;
+      height: 25px;
+      top: 50%;
+      left: 25%;
+      animation: float-cloud 18s ease-in-out infinite 3s;
+
+      &::before {
+        width: 30px;
+        height: 30px;
+        top: -14px;
+        left: 12px;
+      }
+
+      &::after {
+        width: 22px;
+        height: 22px;
+        top: -10px;
+        left: 35px;
+      }
+    }
+
+    &.--c4 {
+      width: 100px;
+      height: 35px;
+      bottom: 20%;
+      right: 8%;
+      animation: float-cloud-reverse 14s ease-in-out infinite 5s;
+
+      &::before {
+        width: 45px;
+        height: 45px;
+        top: -20px;
+        left: 18px;
+      }
+
+      &::after {
+        width: 30px;
+        height: 30px;
+        top: -12px;
+        left: 50px;
+      }
+    }
+
+    &.--c5 {
+      width: 60px;
+      height: 20px;
+      top: 35%;
+      right: 35%;
+      animation: float-cloud 20s ease-in-out infinite 8s;
+
+      &::before {
+        width: 25px;
+        height: 25px;
+        top: -12px;
+        left: 10px;
+      }
+
+      &::after {
+        width: 18px;
+        height: 18px;
+        top: -8px;
+        left: 30px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--jp-text);
+    margin-bottom: var(--space-2);
+    background: linear-gradient(135deg, var(--jp-lavender-deep), var(--jp-pink-deep));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__meta {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__date,
+  &__online {
+    font-size: var(--font-down-1);
+    font-weight: 600;
+    color: var(--jp-text-light);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.2em 0.8em;
+    border-radius: var(--jp-radius-pill);
+    backdrop-filter: blur(4px);
+  }
+
+  &__online {
+    animation: bounce-soft 3s ease-in-out infinite;
+  }
+}
