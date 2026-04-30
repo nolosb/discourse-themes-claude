@@ -1,0 +1,22 @@
+en:
+  theme_metadata:
+    description: "Brutalist homepage. Raw. Loud. Unconventional."
+    settings:
+      dead_threads_count: "Number of zero-reply topics to display"
+  homepage:
+    last_words:
+      label: "LAST WORDS"
+    lurkers:
+      label: "LURKING RIGHT NOW"
+    hot_take:
+      label: "HOT TAKE"
+      subtitle: "most liked post in 24h"
+    dead_threads:
+      label: "DEAD THREADS"
+      subtitle: "zero replies. say something."
+    time_warp:
+      label: "TIME WARP"
+      subtitle: "one year ago today"
+    streak:
+      label: "IRON WILL"
+      subtitle: "consecutive days"

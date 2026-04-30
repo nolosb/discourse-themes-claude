@@ -1,0 +1,41 @@
+{
+  "name": "Discourse Claude 1",
+  "authors": "Discourse",
+  "about_url": null,
+  "license_url": null,
+  "theme_version": "0.0.1",
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {},
+  "modifiers": {
+    "serialize_topic_excerpts": true,
+    "custom_homepage": true,
+    "svg_icons": ["skull", "ghost", "eye", "hourglass-start", "fire", "trophy", "clock-rotate-left", "volume-high"]
+  },
+  "color_schemes": {
+    "BRUTAL": {
+      "primary": "000000",
+      "secondary": "FFFFFF",
+      "tertiary": "FF0000",
+      "quaternary": "000000",
+      "header_background": "CCFF00",
+      "header_primary": "000000",
+      "highlight": "CCFF00",
+      "danger": "FF0000",
+      "success": "000000",
+      "love": "FF0000"
+    },
+    "BRUTAL DARK": {
+      "primary": "FFFFFF",
+      "secondary": "000000",
+      "tertiary": "CCFF00",
+      "quaternary": "FFFFFF",
+      "header_background": "000000",
+      "header_primary": "CCFF00",
+      "highlight": "CCFF00",
+      "danger": "FF0000",
+      "success": "CCFF00",
+      "love": "FF0000"
+    }
+  }
+}
