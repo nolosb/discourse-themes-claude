@@ -16,7 +16,11 @@ export default class BlockHotTopics extends Component {
   @bind
   async fetchHot() {
     const result = await ajax("/top.json", { data: { period: "daily" } });
-    return result.topic_list.topics?.slice(0, 8) || [];
+    const topics = result.topic_list.topics?.slice(0, 8) || [];
+    return {
+      hot: topics.slice(0, 3),
+      rest: topics.slice(3),
+    };
   }
 
   <template>
@@ -29,15 +33,23 @@ export default class BlockHotTopics extends Component {
         <:loading>
           <div class="block-hot-topics__loading">...</div>
         </:loading>
-        <:content as |topics|>
+        <:content as |data|>
           <ul class="block-hot-topics__list">
-            {{#each topics as |topic index|}}
+            {{#each data.hot as |topic|}}
               <li class="block-hot-topics__item">
-                {{#if (lt index 3)}}
-                  <span class="block-hot-topics__fire">
-                    {{i18n (themePrefix @fireLabel)}}
-                  </span>
-                {{/if}}
+                <span class="block-hot-topics__fire">
+                  {{i18n (themePrefix @fireLabel)}}
+                </span>
+                <a href="/t/{{topic.slug}}/{{topic.id}}" class="block-hot-topics__link">
+                  {{topic.title}}
+                </a>
+                <span class="block-hot-topics__replies">
+                  ({{topic.posts_count}})
+                </span>
+              </li>
+            {{/each}}
+            {{#each data.rest as |topic|}}
+              <li class="block-hot-topics__item">
                 <a href="/t/{{topic.slug}}/{{topic.id}}" class="block-hot-topics__link">
                   {{topic.title}}
                 </a>
