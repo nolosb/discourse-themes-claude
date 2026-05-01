@@ -10,6 +10,7 @@
   "modifiers": {
     "serialize_topic_excerpts": true,
     "custom_homepage": true,
+    "only_theme_color_schemes": true,
     "svg_icons": ["crown", "fire", "star", "heart", "bolt", "trophy", "gift", "face-smile", "clock", "ranking-star", "champagne-glasses", "cake-candles", "comments", "meteor"]
   },
   "color_schemes": {

@@ -1,19 +1,19 @@
 import BlockGroup from "discourse/blocks/builtin/block-group";
 import { apiInitializer } from "discourse/lib/api";
+import BlockEmojiHeatmap from "../blocks/block-emoji-heatmap";
+import BlockFakeAd from "../blocks/block-fake-ad";
+import BlockHotTags from "../blocks/block-hot-tags";
+import BlockHotTopics from "../blocks/block-hot-topics";
+import BlockLongestThread from "../blocks/block-longest-thread";
+import BlockMiniPoll from "../blocks/block-mini-poll";
+import BlockMood from "../blocks/block-mood";
+import BlockNewMembers from "../blocks/block-new-members";
+import BlockQuoteOfDay from "../blocks/block-quote-of-day";
+import BlockRandomTopic from "../blocks/block-random-topic";
+import BlockRankings from "../blocks/block-rankings";
+import BlockStaffPicks from "../blocks/block-staff-picks";
 import BlockTicker from "../blocks/block-ticker";
 import BlockWelcomeHeader from "../blocks/block-welcome-header";
-import BlockRankings from "../blocks/block-rankings";
-import BlockHotTopics from "../blocks/block-hot-topics";
-import BlockNewMembers from "../blocks/block-new-members";
-import BlockMood from "../blocks/block-mood";
-import BlockRandomTopic from "../blocks/block-random-topic";
-import BlockMiniPoll from "../blocks/block-mini-poll";
-import BlockEmojiHeatmap from "../blocks/block-emoji-heatmap";
-import BlockLongestThread from "../blocks/block-longest-thread";
-import BlockStaffPicks from "../blocks/block-staff-picks";
-import BlockHotTags from "../blocks/block-hot-tags";
-import BlockQuoteOfDay from "../blocks/block-quote-of-day";
-import BlockFakeAd from "../blocks/block-fake-ad";
 
 export default apiInitializer((api) => {
   api.renderBlocks("homepage-blocks", [

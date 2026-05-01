@@ -17,7 +17,7 @@ export default class BlockHotTopics extends Component {
   @bind
   async fetchHot() {
     const result = await ajax("/top.json", { data: { period: this.args.period } });
-    const topics = result.topic_list.topics?.slice(0, 8) || [];
+    const topics = result.topic_list.topics?.slice(0, 5) || [];
     return {
       hot: topics.slice(0, 3),
       rest: topics.slice(3),
