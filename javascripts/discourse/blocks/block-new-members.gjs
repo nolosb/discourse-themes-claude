@@ -18,7 +18,13 @@ export default class BlockNewMembers extends Component {
     const result = await ajax("/directory_items.json", {
       data: { period: "weekly", order: "days_visited", page: 0 },
     });
-    return result.directory_items?.slice(0, 8) || [];
+    return (result.directory_items?.slice(0, 8) || []).map((item) => ({
+      ...item,
+      user: {
+        ...item.user,
+        avatar_template: item.user.avatar_template.replace("{size}", "90"),
+      },
+    }));
   }
 
   <template>

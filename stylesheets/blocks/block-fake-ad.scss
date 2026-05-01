@@ -1,0 +1,63 @@
+.block-fake-ad {
+  position: relative;
+  background: linear-gradient(135deg, var(--jp-peach), var(--jp-yellow), var(--jp-pink));
+  background-size: 300% 300%;
+  animation: shimmer 6s ease infinite;
+  border: 3px dashed var(--jp-peach-deep);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  text-align: center;
+  overflow: hidden;
+
+  &__badge {
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    background: rgba(74, 59, 92, 0.15);
+    color: var(--jp-text-light);
+    font-size: var(--font-down-4);
+    font-weight: 800;
+    padding: 0.15em 0.5em;
+    border-radius: var(--jp-radius-pill);
+    letter-spacing: 0.08em;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__headline {
+    font-size: var(--font-up-3);
+    font-weight: 900;
+    color: var(--jp-text);
+    line-height: 1.1;
+  }
+
+  &__subtext {
+    font-size: var(--font-down-1);
+    color: var(--jp-text);
+    opacity: 0.8;
+  }
+
+  &__cta {
+    display: inline-block;
+    background: var(--jp-pink-deep);
+    color: white;
+    font-weight: 800;
+    font-size: var(--font-down-1);
+    padding: 0.4em 1.4em;
+    border-radius: var(--jp-radius-pill);
+    text-decoration: none;
+    animation: pulse-glow 2s ease infinite;
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      color: white;
+    }
+  }
+
+}

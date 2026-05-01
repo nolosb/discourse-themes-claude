@@ -55,3 +55,7 @@ en:
       title: "Trending Tags"
     quote_of_day:
       title: "Quote of the Day"
+    fake_ad:
+      headline: "YOUR AD HERE ✨"
+      subtext: "Premium placement on the hottest community portal in town~"
+      cta: "Inquire Now →"

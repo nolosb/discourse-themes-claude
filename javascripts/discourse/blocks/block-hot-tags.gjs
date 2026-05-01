@@ -16,7 +16,7 @@ export default class BlockHotTags extends Component {
   async fetchTags() {
     const result = await ajax("/tags.json");
     const tags = result.tags || [];
-    const sorted = [...tags].sort((a, b) => b.count - a.count).slice(0, 16);
+    const sorted = [...tags].sort((a, b) => b.count - a.count).slice(0, 12);
     const maxCount = sorted[0]?.count || 1;
     return sorted.map((tag) => ({
       ...tag,
@@ -40,7 +40,7 @@ export default class BlockHotTags extends Component {
               <a
                 href="/tag/{{tag.name}}"
                 class="block-hot-tags__tag"
-                style="font-size: calc(0.7rem + {{tag.weight}}em); opacity: calc(0.5 + {{tag.weight}} * 0.5)"
+                style="font-size: calc(0.6rem + {{tag.weight}} * 0.8em); opacity: calc(0.5 + {{tag.weight}} * 0.5)"
               >
                 {{tag.name}}
               </a>

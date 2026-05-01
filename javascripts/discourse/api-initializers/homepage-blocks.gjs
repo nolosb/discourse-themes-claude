@@ -13,6 +13,7 @@ import BlockLongestThread from "../blocks/block-longest-thread";
 import BlockStaffPicks from "../blocks/block-staff-picks";
 import BlockHotTags from "../blocks/block-hot-tags";
 import BlockQuoteOfDay from "../blocks/block-quote-of-day";
+import BlockFakeAd from "../blocks/block-fake-ad";
 
 export default apiInitializer((api) => {
   api.renderBlocks("homepage-blocks", [
@@ -109,6 +110,15 @@ export default apiInitializer((api) => {
                 title: "homepage.longest_thread.title",
                 subtitle: "homepage.longest_thread.subtitle",
                 period: settings.homepage_period,
+              },
+            },
+            {
+              block: BlockFakeAd,
+              id: "fake-ad",
+              args: {
+                headline: "homepage.fake_ad.headline",
+                subtext: "homepage.fake_ad.subtext",
+                cta: "homepage.fake_ad.cta",
               },
             },
           ],

@@ -1,33 +1,36 @@
-.d-header-wrap {
-  --header-offset: 0px;
-}
+@use "lib/viewport";
 
 .d-header {
   --header-icon-size: 16px;
-  background: transparent;
+  background: linear-gradient(
+    90deg,
+    rgb(232, 222, 255, 0.3),
+    rgb(255, 228, 240, 0.3),
+    rgb(232, 222, 255, 0.3)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 8s ease infinite;
+  backdrop-filter: blur(12px);
   border: none;
+  border-bottom: 1px solid rgb(255, 123, 172, 0.2);
   box-shadow: none;
-  height: 0 !important;
-  padding: 0;
 
   .title {
-    display: none;
+    flex-shrink: 0;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    img.logo-small,
+    img.logo-big {
+      max-height: 20px;
+    }
   }
 
   .panel {
-    display: flex;
-    box-sizing: border-box;
-    align-items: center;
-    gap: 0;
-    background: var(--jp-pink);
-    backdrop-filter: blur(8px);
-    border: 2px solid var(--jp-pink-deep);
-    border-radius: var(--jp-radius-pill);
-    padding: 0.1em 0.5em;
-    box-shadow: var(--jp-shadow);
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    flex-shrink: 0;
 
     .icon,
     .btn {
@@ -43,13 +46,5 @@
       width: var(--header-icon-size) !important;
       height: var(--header-icon-size) !important;
     }
-  }
-}
-
-.homepage-blocks__block--ticker {
-  margin-right: 210px;
-
-  @include viewport.until(sm) {
-    margin-right: 120px;
   }
 }

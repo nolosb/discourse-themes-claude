@@ -4,6 +4,8 @@ import AsyncContent from "discourse/components/async-content";
 import { bind } from "discourse/lib/decorators";
 import { ajax } from "discourse/lib/ajax";
 import { i18n } from "discourse-i18n";
+import { htmlSafe } from "@ember/template";
+import { emojiUnescape } from "discourse/lib/text";
 
 @block("theme:claude-1:staff-picks", {
   description: "Pinned and staff-selected topics displayed as curated picks",
@@ -17,7 +19,10 @@ export default class BlockStaffPicks extends Component {
     const result = await ajax("/latest.json", { data: { per_page: 30 } });
     const topics = result.topic_list.topics || [];
     const pinned = topics.filter((t) => t.pinned || t.pinned_globally);
-    return pinned.slice(0, 4);
+    return pinned.slice(0, 4).map((t) => ({
+      ...t,
+      fancy_title: emojiUnescape(t.fancy_title || t.title),
+    }));
   }
 
   <template>
@@ -48,7 +53,7 @@ export default class BlockStaffPicks extends Component {
                 {{/if}}
                 <div class="block-staff-picks__info">
                   <span class="block-staff-picks__badge">Staff Pick</span>
-                  <h4 class="block-staff-picks__topic-title">{{topic.title}}</h4>
+                  <h4 class="block-staff-picks__topic-title">{{htmlSafe topic.fancy_title}}</h4>
                 </div>
               </a>
             {{/each}}

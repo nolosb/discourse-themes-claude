@@ -26,7 +26,9 @@ export default class BlockQuoteOfDay extends Component {
       return null;
     }
     const top = posts.slice(0, 10);
-    return top[Math.floor(Math.random() * top.length)];
+    const post = top[Math.floor(Math.random() * top.length)];
+    post.avatar_template = post.avatar_template.replace("{size}", "64");
+    return post;
   }
 
   <template>
