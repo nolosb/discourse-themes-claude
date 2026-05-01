@@ -1,5 +1,3 @@
-# Discourse Claude 1
+# Community Plaza
 
-**Theme Summary**
-
-For more information, please see: **url to meta topic**
+Japanese portal homepage — dense, pastel, animated community plaza
