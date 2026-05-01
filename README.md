@@ -1,5 +1,3 @@
-# Discourse Claude 1
+# Discourse Claude Themes
 
-**Theme Summary**
-
-For more information, please see: **url to meta topic**
+A collection of themes generated with Claude Code.
