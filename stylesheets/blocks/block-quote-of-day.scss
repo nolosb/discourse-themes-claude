@@ -1,0 +1,79 @@
+.block-quote-of-day {
+  background: linear-gradient(135deg, var(--jp-sky), var(--jp-mint));
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+
+  &__title {
+    font-size: var(--font-up-1);
+    margin-bottom: var(--space-3);
+    color: var(--jp-text);
+
+    &::before {
+      content: "💬 ";
+    }
+  }
+
+  &__card {
+    display: block;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: var(--jp-radius);
+    padding: var(--space-4);
+    text-decoration: none;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid var(--jp-lavender-deep);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--jp-shadow-hover);
+    }
+
+    &.--loading,
+    &.--empty {
+      text-align: center;
+      color: var(--jp-text-light);
+      font-weight: 600;
+      border-left: none;
+    }
+  }
+
+  &__text {
+    font-size: var(--font-up-0);
+    font-weight: 600;
+    color: var(--jp-text);
+    line-height: var(--line-height-large);
+    margin: 0 0 var(--space-3);
+    font-style: italic;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__attribution {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &__author {
+    font-size: var(--font-down-1);
+    font-weight: 700;
+    color: var(--jp-text);
+  }
+
+  &__likes {
+    margin-left: auto;
+    font-size: var(--font-down-1);
+    font-weight: 700;
+    color: var(--jp-pink-deep);
+  }
+}

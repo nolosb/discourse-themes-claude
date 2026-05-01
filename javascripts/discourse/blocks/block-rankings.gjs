@@ -12,6 +12,7 @@ import { i18n } from "discourse-i18n";
     likesLabel: { type: "string" },
     postsLabel: { type: "string" },
     count: { type: "number", default: 5 },
+    period: { type: "string", default: "yearly" },
   },
 })
 export default class BlockRankings extends Component {
@@ -19,10 +20,10 @@ export default class BlockRankings extends Component {
   async fetchRankings() {
     const [likesResult, postsResult] = await Promise.all([
       ajax("/directory_items.json", {
-        data: { period: "weekly", order: "likes_given", page: 0 },
+        data: { period: this.args.period, order: "likes_given", page: 0 },
       }),
       ajax("/directory_items.json", {
-        data: { period: "weekly", order: "post_count", page: 0 },
+        data: { period: this.args.period, order: "post_count", page: 0 },
       }),
     ]);
     return {

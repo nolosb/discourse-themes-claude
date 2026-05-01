@@ -8,6 +8,11 @@ import BlockNewMembers from "../blocks/block-new-members";
 import BlockMood from "../blocks/block-mood";
 import BlockRandomTopic from "../blocks/block-random-topic";
 import BlockMiniPoll from "../blocks/block-mini-poll";
+import BlockEmojiHeatmap from "../blocks/block-emoji-heatmap";
+import BlockLongestThread from "../blocks/block-longest-thread";
+import BlockStaffPicks from "../blocks/block-staff-picks";
+import BlockHotTags from "../blocks/block-hot-tags";
+import BlockQuoteOfDay from "../blocks/block-quote-of-day";
 
 export default apiInitializer((api) => {
   api.renderBlocks("homepage-blocks", [
@@ -43,6 +48,7 @@ export default apiInitializer((api) => {
               args: {
                 title: "homepage.hot_topics.title",
                 fireLabel: "homepage.hot_topics.fire",
+                period: settings.homepage_period,
               },
             },
             {
@@ -51,6 +57,21 @@ export default apiInitializer((api) => {
               args: {
                 title: "homepage.new_members.title",
                 welcomeMsg: "homepage.new_members.welcome_msg",
+              },
+            },
+            {
+              block: BlockStaffPicks,
+              id: "staff-picks",
+              args: {
+                title: "homepage.staff_picks.title",
+              },
+            },
+            {
+              block: BlockQuoteOfDay,
+              id: "quote-of-day",
+              args: {
+                title: "homepage.quote_of_day.title",
+                period: settings.homepage_period,
               },
             },
           ],
@@ -67,6 +88,7 @@ export default apiInitializer((api) => {
                 likesLabel: "homepage.rankings.likes_given",
                 postsLabel: "homepage.rankings.posts",
                 count: settings.ranking_count,
+                period: settings.homepage_period,
               },
             },
             {
@@ -77,6 +99,16 @@ export default apiInitializer((api) => {
                 postsLabel: "homepage.mood.posts_today",
                 topicsLabel: "homepage.mood.topics_today",
                 likesLabel: "homepage.mood.likes_today",
+                period: settings.homepage_period,
+              },
+            },
+            {
+              block: BlockLongestThread,
+              id: "longest-thread",
+              args: {
+                title: "homepage.longest_thread.title",
+                subtitle: "homepage.longest_thread.subtitle",
+                period: settings.homepage_period,
               },
             },
           ],
@@ -102,6 +134,20 @@ export default apiInitializer((api) => {
                 option1: "homepage.mini_poll.great",
                 option2: "homepage.mini_poll.okay",
                 option3: "homepage.mini_poll.sleepy",
+              },
+            },
+            {
+              block: BlockEmojiHeatmap,
+              id: "emoji-heatmap",
+              args: {
+                title: "homepage.emoji_heatmap.title",
+              },
+            },
+            {
+              block: BlockHotTags,
+              id: "hot-tags",
+              args: {
+                title: "homepage.hot_tags.title",
               },
             },
           ],

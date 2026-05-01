@@ -1,8 +1,8 @@
 import Component from "@glimmer/component";
 import { block } from "discourse/blocks";
 import AsyncContent from "discourse/components/async-content";
-import { bind } from "discourse/lib/decorators";
 import { ajax } from "discourse/lib/ajax";
+import { bind } from "discourse/lib/decorators";
 import { i18n } from "discourse-i18n";
 
 @block("theme:claude-1:hot-topics", {
@@ -10,12 +10,13 @@ import { i18n } from "discourse-i18n";
   args: {
     title: { type: "string" },
     fireLabel: { type: "string" },
+    period: { type: "string", default: "yearly" },
   },
 })
 export default class BlockHotTopics extends Component {
   @bind
   async fetchHot() {
-    const result = await ajax("/top.json", { data: { period: "daily" } });
+    const result = await ajax("/top.json", { data: { period: this.args.period } });
     const topics = result.topic_list.topics?.slice(0, 8) || [];
     return {
       hot: topics.slice(0, 3),
@@ -40,7 +41,10 @@ export default class BlockHotTopics extends Component {
                 <span class="block-hot-topics__fire">
                   {{i18n (themePrefix @fireLabel)}}
                 </span>
-                <a href="/t/{{topic.slug}}/{{topic.id}}" class="block-hot-topics__link">
+                <a
+                  href="/t/{{topic.slug}}/{{topic.id}}"
+                  class="block-hot-topics__link"
+                >
                   {{topic.title}}
                 </a>
                 <span class="block-hot-topics__replies">
@@ -50,7 +54,10 @@ export default class BlockHotTopics extends Component {
             {{/each}}
             {{#each data.rest as |topic|}}
               <li class="block-hot-topics__item">
-                <a href="/t/{{topic.slug}}/{{topic.id}}" class="block-hot-topics__link">
+                <a
+                  href="/t/{{topic.slug}}/{{topic.id}}"
+                  class="block-hot-topics__link"
+                >
                   {{topic.title}}
                 </a>
                 <span class="block-hot-topics__replies">

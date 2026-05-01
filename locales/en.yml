@@ -6,6 +6,7 @@ en:
       show_clouds: "Show floating cloud animations"
       ticker_speed: "Marquee animation duration in seconds (lower = faster)"
       ranking_count: "Number of users to show in rankings"
+      homepage_period: "Time period for rankings and hot topics (daily, weekly, monthly, quarterly, yearly, all)"
   homepage:
     ticker:
       new: "NEW"
@@ -43,3 +44,14 @@ en:
       great: "Great!"
       okay: "Okay~"
       sleepy: "Sleepy..."
+    emoji_heatmap:
+      title: "Emoji Vibes"
+    longest_thread:
+      title: "Legendary Thread"
+      subtitle: "most replies this period"
+    staff_picks:
+      title: "Staff Picks"
+    hot_tags:
+      title: "Trending Tags"
+    quote_of_day:
+      title: "Quote of the Day"

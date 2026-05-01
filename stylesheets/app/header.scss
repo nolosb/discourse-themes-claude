@@ -1,0 +1,55 @@
+.d-header-wrap {
+  --header-offset: 0px;
+}
+
+.d-header {
+  --header-icon-size: 16px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  height: 0 !important;
+  padding: 0;
+
+  .title {
+    display: none;
+  }
+
+  .panel {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 0;
+    background: var(--jp-pink);
+    backdrop-filter: blur(8px);
+    border: 2px solid var(--jp-pink-deep);
+    border-radius: var(--jp-radius-pill);
+    padding: 0.1em 0.5em;
+    box-shadow: var(--jp-shadow);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    .icon,
+    .btn {
+      padding: 0.2em 0.3em;
+
+      .d-icon {
+        width: var(--header-icon-size);
+        height: var(--header-icon-size);
+      }
+    }
+
+    img.avatar {
+      width: var(--header-icon-size) !important;
+      height: var(--header-icon-size) !important;
+    }
+  }
+}
+
+.homepage-blocks__block--ticker {
+  margin-right: 210px;
+
+  @include viewport.until(sm) {
+    margin-right: 120px;
+  }
+}

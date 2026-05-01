@@ -1,0 +1,63 @@
+.block-emoji-heatmap {
+  background: linear-gradient(135deg, var(--jp-yellow), var(--jp-peach));
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+
+  &__title {
+    font-size: var(--font-up-1);
+    margin-bottom: var(--space-3);
+    color: var(--jp-text);
+
+    &::before {
+      content: "😍 ";
+    }
+  }
+
+  &__loading,
+  &__empty {
+    text-align: center;
+    padding: var(--space-3);
+    color: var(--jp-text-light);
+    font-weight: 600;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-half);
+    padding: var(--space-1);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--jp-radius);
+    animation: bounce-soft 2s ease-in-out infinite;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__count {
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: var(--jp-text);
+    background: white;
+    padding: 0.1em 0.4em;
+    border-radius: var(--jp-radius-pill);
+  }
+}

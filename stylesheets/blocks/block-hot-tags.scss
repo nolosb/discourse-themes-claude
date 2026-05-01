@@ -1,0 +1,49 @@
+.block-hot-tags {
+  background: var(--jp-cream);
+  border: var(--jp-border);
+  border-radius: var(--jp-radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--jp-shadow);
+
+  &__title {
+    font-size: var(--font-up-1);
+    margin-bottom: var(--space-3);
+    color: var(--jp-text);
+
+    &::before {
+      content: "🏷️ ";
+    }
+  }
+
+  &__loading {
+    text-align: center;
+    padding: var(--space-3);
+    color: var(--jp-text-light);
+  }
+
+  &__cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-2);
+    align-items: center;
+    justify-content: center;
+    line-height: 1.8;
+  }
+
+  &__tag {
+    display: inline-block;
+    color: var(--jp-lavender-deep);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.1em 0.4em;
+    border-radius: var(--jp-radius-pill);
+    transition: background 0.15s ease, transform 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+
+    &:hover {
+      background: var(--jp-lavender);
+      color: var(--jp-text);
+      transform: scale(1.1);
+    }
+  }
+}
