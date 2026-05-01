@@ -1,5 +1,4 @@
-# Discourse Claude 1
+# Newspaper from Hell
 
-**Theme Summary**
+Brutalist homepage theme with unconventional content blocks
 
-For more information, please see: **url to meta topic**
